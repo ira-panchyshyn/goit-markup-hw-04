@@ -133,7 +133,14 @@ img {
 /*-------------- SERVICES --------------*/
 
 .services {
-  background-color: var(--dark-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/services-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -184,6 +191,12 @@ img {
 
 .advantages-item {
   width: 270px;
+}
+
+.advantages-icon {
+  background-color: var(--light-background-color);
+  height: 120px;
+  margin-bottom: var(--card-gap);
 }
 
 .advantages-item:not(:last-child) {
@@ -278,6 +291,44 @@ img {
 .team-card-bottom {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+/*---------------- CUSTOMERS -------------- */
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  margin-bottom: 50px;
+}
+
+.customers-item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
+.customers-company {
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.customers-company:focus,
+.customers-company:hover {
+  border-color: var(--accent-color);
+}
+
+.customers-list {
+  display: flex;
+  flex-basis: calc(100% / 6 - var(--card-gap));
+}
+
+.customers-link {
+  display: block;
+  height: 100%;
 }
 
 /*---------------- PROJECTS --------------- */
@@ -392,6 +443,22 @@ img {
   margin-bottom: 9px;
 }
 
-/* .footer-logo {
-  margin-bottom: 20px;
-} */
+.social-title {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--alternative-text-color);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.information {
+  margin-right: 70px;
+}
+
+.social {
+  padding-top: 12px;
+}
